@@ -1,0 +1,8 @@
+app
+app.gui
+app.tui
+archive.data
+archive.exception
+archive.interfacce
+archive.system
+archive.utility
