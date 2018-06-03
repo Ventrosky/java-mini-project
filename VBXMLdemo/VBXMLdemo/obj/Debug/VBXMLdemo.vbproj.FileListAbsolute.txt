@@ -1,0 +1,11 @@
+C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\obj\Debug\VBXMLdemo.Form1.resources
+C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\obj\Debug\VBXMLdemo.Resources.resources
+C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\obj\Debug\VBXMLdemo.vbproj.GenerateResource.cache
+C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\obj\Debug\VBXMLdemo.vbproj.CoreCompileInputs.cache
+C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\bin\Debug\VBXMLdemo.exe.config
+C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\bin\Debug\VBXMLdemo.exe
+C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\bin\Debug\VBXMLdemo.pdb
+C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\bin\Debug\VBXMLdemo.xml
+C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\obj\Debug\VBXMLdemo.exe
+C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\obj\Debug\VBXMLdemo.xml
+C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\obj\Debug\VBXMLdemo.pdb

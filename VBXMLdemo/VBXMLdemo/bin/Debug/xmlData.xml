@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSet1 xmlns="http://tempuri.org/DataSet1.xsd">
+  <Contacts>
+    <ID>0</ID>
+    <Name>Jhon-Doe</Name>
+    <Phone>555 1234567</Phone>
+  </Contacts>
+  <Contacts>
+    <ID>1</ID>
+    <Name>Mario-Rossi</Name>
+    <Phone>333 1234566</Phone>
+  </Contacts>
+</DataSet1>
