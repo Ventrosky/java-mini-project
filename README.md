@@ -1,6 +1,6 @@
 # java-projects
-Small Java projects.
+Small OOP projects.
 
-- agenzia-viaggi                     - small university project, travel agency app.
+- agenzia-viaggi                     - Java university project, travel agency app.
 - tappy-playe                        - just another flappy bird clone using libGDX.
-
+- VBXMLdemo                          - simple demo Visual Basic and XML
