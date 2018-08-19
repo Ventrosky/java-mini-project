@@ -9,3 +9,4 @@ C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\bin\Debug\VBXMLdemo.xml
 C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\obj\Debug\VBXMLdemo.exe
 C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\obj\Debug\VBXMLdemo.xml
 C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\obj\Debug\VBXMLdemo.pdb
+C:\Users\Ventrosky\source\repos\VBXMLdemo\VBXMLdemo\obj\Debug\VBXMLdemo.vbprojAssemblyReference.cache

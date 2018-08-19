@@ -1,13 +1,15 @@
 <?xml version="1.0" standalone="yes"?>
 <DataSet1 xmlns="http://tempuri.org/DataSet1.xsd">
   <Contacts>
-    <ID>0</ID>
-    <Name>Jhon-Doe</Name>
-    <Phone>555 1234567</Phone>
+    <ID>2</ID>
+    <Name>PPHGYIIIQL JHMEKGBBWR</Name>
+    <Phone>111 1111111</Phone>
+    <Codice_x0020_Fiscale>JMKPPH99D55A944T</Codice_x0020_Fiscale>
   </Contacts>
   <Contacts>
-    <ID>1</ID>
-    <Name>Mario-Rossi</Name>
-    <Phone>333 1234566</Phone>
+    <ID>3</ID>
+    <Name>TKEOLCQUQK BGICIXBGMK</Name>
+    <Phone>111 1111111</Phone>
+    <Codice_x0020_Fiscale>BCXTKL66T53D612A</Codice_x0020_Fiscale>
   </Contacts>
 </DataSet1>

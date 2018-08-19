@@ -126,6 +126,9 @@
   <metadata name="PhoneLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="Codice_FiscaleLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <metadata name="ContactsBindingNavigator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>296, 17</value>
   </metadata>
@@ -207,4 +210,18 @@
         dtINAGGiDUDGyGpoawAxeNSAQWkAORiqnRLAwAAA9EMMU8Daa3MAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="ToolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEtSURBVEhLzZXLbcMwEAVZjQrwyRcVpFvKSAWBS0kX6SM1
+        BJAxCkdYr0xRii9Z4IHcD99QggyXfxvDMMxRtbwfveFo+HW5PGjv3BIMfH6URXm4ZYrmcVzVhNB4fyur
+        IqRljKK5tacQARHEXvPvuazKxpo7y1ptH0PzuCJM3ZujaK4x6kKQgGweJURAhKBquQ2aRwCIfgZUm3Yw
+        lAHxdvmmpyEMnAVECLVqtQ2ampsL6en07eOhPR26uZEPsvr4vor4Osz9ZLsQBn5u10WClKaIPILib4Je
+        tdsGTQFjvZGrZpogIacAWQCExBprfopDgPwVkbeUIacBBPs9ZcAuhEYEsPqKWnoGOQTQfJqmVdkcvQTA
+        1L35nyEU8u2t8Q9nrwdR5NX6NyhYdP+qSinlDqFM2Ok0m992AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="BindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>490, 17</value>
+  </metadata>
 </root>

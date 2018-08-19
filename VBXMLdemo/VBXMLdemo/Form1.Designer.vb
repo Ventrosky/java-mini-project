@@ -26,6 +26,7 @@ Partial Class Form1
         Dim IDLabel As System.Windows.Forms.Label
         Dim NameLabel As System.Windows.Forms.Label
         Dim PhoneLabel As System.Windows.Forms.Label
+        Dim Codice_FiscaleLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.ContactsBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
@@ -42,16 +43,21 @@ Partial Class Form1
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ContactsBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.IDTextBox = New System.Windows.Forms.TextBox()
         Me.NameTextBox = New System.Windows.Forms.TextBox()
         Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.Codice_FiscaleTextBox = New System.Windows.Forms.TextBox()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         IDLabel = New System.Windows.Forms.Label()
         NameLabel = New System.Windows.Forms.Label()
         PhoneLabel = New System.Windows.Forms.Label()
+        Codice_FiscaleLabel = New System.Windows.Forms.Label()
         CType(Me.ContactsBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContactsBindingNavigator.SuspendLayout()
         CType(Me.ContactsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'IDLabel
@@ -82,13 +88,22 @@ Partial Class Form1
         PhoneLabel.Text = "Phone:"
         AddHandler PhoneLabel.Click, AddressOf Me.PhoneLabel_Click
         '
+        'Codice_FiscaleLabel
+        '
+        Codice_FiscaleLabel.AutoSize = True
+        Codice_FiscaleLabel.Location = New System.Drawing.Point(12, 123)
+        Codice_FiscaleLabel.Name = "Codice_FiscaleLabel"
+        Codice_FiscaleLabel.Size = New System.Drawing.Size(79, 13)
+        Codice_FiscaleLabel.TabIndex = 9
+        Codice_FiscaleLabel.Text = "Codice Fiscale:"
+        '
         'ContactsBindingNavigator
         '
         Me.ContactsBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
         Me.ContactsBindingNavigator.BindingSource = Me.ContactsBindingSource
         Me.ContactsBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.ContactsBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.ContactsBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ContactsBindingNavigatorSaveItem})
+        Me.ContactsBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ContactsBindingNavigatorSaveItem, Me.ToolStripButton1})
         Me.ContactsBindingNavigator.Location = New System.Drawing.Point(0, 0)
         Me.ContactsBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.ContactsBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
@@ -96,7 +111,7 @@ Partial Class Form1
         Me.ContactsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ContactsBindingNavigator.Name = "ContactsBindingNavigator"
         Me.ContactsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ContactsBindingNavigator.Size = New System.Drawing.Size(312, 25)
+        Me.ContactsBindingNavigator.Size = New System.Drawing.Size(309, 25)
         Me.ContactsBindingNavigator.TabIndex = 0
         Me.ContactsBindingNavigator.Text = "BindingNavigator1"
         '
@@ -203,12 +218,22 @@ Partial Class Form1
         Me.ContactsBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ContactsBindingNavigatorSaveItem.Text = "Salva dati"
         '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
+        '
         'IDTextBox
         '
         Me.IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContactsBindingSource, "ID", True))
         Me.IDTextBox.Location = New System.Drawing.Point(56, 42)
         Me.IDTextBox.Name = "IDTextBox"
-        Me.IDTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.IDTextBox.Size = New System.Drawing.Size(239, 20)
         Me.IDTextBox.TabIndex = 2
         '
         'NameTextBox
@@ -216,7 +241,7 @@ Partial Class Form1
         Me.NameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContactsBindingSource, "Name", True))
         Me.NameTextBox.Location = New System.Drawing.Point(56, 68)
         Me.NameTextBox.Name = "NameTextBox"
-        Me.NameTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.NameTextBox.Size = New System.Drawing.Size(239, 20)
         Me.NameTextBox.TabIndex = 4
         '
         'MaskedTextBox1
@@ -228,11 +253,21 @@ Partial Class Form1
         Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 20)
         Me.MaskedTextBox1.TabIndex = 6
         '
+        'Codice_FiscaleTextBox
+        '
+        Me.Codice_FiscaleTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContactsBindingSource, "Codice Fiscale", True))
+        Me.Codice_FiscaleTextBox.Location = New System.Drawing.Point(100, 120)
+        Me.Codice_FiscaleTextBox.Name = "Codice_FiscaleTextBox"
+        Me.Codice_FiscaleTextBox.Size = New System.Drawing.Size(195, 20)
+        Me.Codice_FiscaleTextBox.TabIndex = 10
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(312, 143)
+        Me.ClientSize = New System.Drawing.Size(309, 157)
+        Me.Controls.Add(Codice_FiscaleLabel)
+        Me.Controls.Add(Me.Codice_FiscaleTextBox)
         Me.Controls.Add(Me.MaskedTextBox1)
         Me.Controls.Add(IDLabel)
         Me.Controls.Add(Me.IDTextBox)
@@ -241,12 +276,13 @@ Partial Class Form1
         Me.Controls.Add(PhoneLabel)
         Me.Controls.Add(Me.ContactsBindingNavigator)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Rng Subjects"
         CType(Me.ContactsBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContactsBindingNavigator.ResumeLayout(False)
         Me.ContactsBindingNavigator.PerformLayout()
         CType(Me.ContactsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -274,4 +310,7 @@ Partial Class Form1
     Friend WithEvents IDTextBox As TextBox
     Friend WithEvents NameTextBox As TextBox
     Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents Codice_FiscaleTextBox As TextBox
+    Friend WithEvents BindingSource1 As BindingSource
 End Class

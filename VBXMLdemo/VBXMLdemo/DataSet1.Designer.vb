@@ -289,6 +289,8 @@ Partial Public Class DataSet1
         
         Private columnPhone As Global.System.Data.DataColumn
         
+        Private columnCodice_Fiscale As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -349,6 +351,14 @@ Partial Public Class DataSet1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Codice_FiscaleColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCodice_Fiscale
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -385,9 +395,9 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddContactsRow(ByVal Name As String, ByVal Phone As String) As ContactsRow
+        Public Overloads Function AddContactsRow(ByVal Name As String, ByVal Phone As String, ByVal Codice_Fiscale As String) As ContactsRow
             Dim rowContactsRow As ContactsRow = CType(Me.NewRow,ContactsRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Name, Phone}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Name, Phone, Codice_Fiscale}
             rowContactsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowContactsRow)
             Return rowContactsRow
@@ -413,6 +423,7 @@ Partial Public Class DataSet1
             Me.columnID = MyBase.Columns("ID")
             Me.columnName = MyBase.Columns("Name")
             Me.columnPhone = MyBase.Columns("Phone")
+            Me.columnCodice_Fiscale = MyBase.Columns("Codice Fiscale")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -424,6 +435,8 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnName)
             Me.columnPhone = New Global.System.Data.DataColumn("Phone", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPhone)
+            Me.columnCodice_Fiscale = New Global.System.Data.DataColumn("Codice Fiscale", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCodice_Fiscale)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, false))
             Me.columnID.AutoIncrement = true
             Me.columnID.Unique = true
@@ -618,6 +631,21 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Codice_Fiscale() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableContacts.Codice_FiscaleColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'Codice Fiscale' nella tabella 'Contacts' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableContacts.Codice_FiscaleColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsIDNull() As Boolean
             Return Me.IsNull(Me.tableContacts.IDColumn)
         End Function
@@ -650,6 +678,18 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetPhoneNull()
             Me(Me.tableContacts.PhoneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsCodice_FiscaleNull() As Boolean
+            Return Me.IsNull(Me.tableContacts.Codice_FiscaleColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetCodice_FiscaleNull()
+            Me(Me.tableContacts.Codice_FiscaleColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
