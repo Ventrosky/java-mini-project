@@ -126,7 +126,7 @@ Public Class Form1
         Private Function getConsonanti(ByVal nomeCognome As String, ByVal isNome As Boolean) As String
             Dim vocali As List(Of String) = New List(Of String)
             Dim consonanti As List(Of String) = New List(Of String)
-            Dim mods As Integer = If(isNome, 0, 1)
+            Dim mods As Integer = If(isNome, 1, 0)
             Dim builder As System.Text.StringBuilder = New StringBuilder()
             Dim i As Integer = 0
 
