@@ -6,7 +6,6 @@ Imports System.Threading
 Module Program
 
     Public codaTest As New TestConcurrency()
-    Public mySyncdQ As New ConcurrentQueue(Of DataRow)
     Public evenCount As Integer = 0
     Public oddCount As Integer = 0
 
