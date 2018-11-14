@@ -1,5 +1,5 @@
-# java-projects
-Small OOP projects.
+# OOP-projects
+Small OOP projects in Java & VB.NET
 
 - agenzia-viaggi                     - **Java** university project, travel agency app.
 - tappy-playe                        - just another flappy bird clone using **libGDX**.
