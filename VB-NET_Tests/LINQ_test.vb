@@ -1,4 +1,7 @@
 
+
+Imports System.Threading
+
 Class Print
     Public ReadOnly name As String
     Public ReadOnly type As String
@@ -49,14 +52,19 @@ Module LINQ_test
                           Order By p.type Descending
                           Group By Operazione = p.name, Nurelaz = p.nurel Into GroupPrint = Group
 
+        Dim T(queryStampe.Count) As Thread
+        Dim i As Integer = 0
         For Each gruppo In queryStampe
-            Console.WriteLine($"[*] {gruppo.Nurelaz} - {gruppo.Operazione}")
+            'Console.WriteLine($"[*] {gruppo.Nurelaz} - {gruppo.Operazione}")
             'For Each stampa In gruppo.GroupPrint
             '    Console.WriteLine($" -> {stampa.name} : {stampa.type}")
-            myProcess(gruppo.GroupPrint)
+            T(i) = New Thread(Sub() myProcess(gruppo.GroupPrint))
+            T(i).Start()
+            i += 1
+            'myProcess(gruppo.GroupPrint)
             'Next
         Next
-
+        Threading.Thread.Sleep(5000)
     End Sub
 
     Sub myProcess(ByVal o As Object)
