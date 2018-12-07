@@ -1,5 +1,3 @@
-
-
 Imports System.Threading
 
 Class Print
@@ -53,22 +51,22 @@ Module LINQ_test
                           Group By Operazione = p.name, Nurelaz = p.nurel Into GroupPrint = Group
 
         Dim T(queryStampe.Count) As Thread
-        Dim i As Integer = 0
+        Dim list As New List(Of Thread)
         For Each gruppo In queryStampe
             'Console.WriteLine($"[*] {gruppo.Nurelaz} - {gruppo.Operazione}")
             'For Each stampa In gruppo.GroupPrint
             '    Console.WriteLine($" -> {stampa.name} : {stampa.type}")
-            T(i) = New Thread(Sub() myProcess(gruppo.GroupPrint))
-            T(i).Start()
-            i += 1
+            Dim thread = New Thread(Sub() myProcess(gruppo.GroupPrint))
+            thread.Start()
+            list.Add(thread)
             'myProcess(gruppo.GroupPrint)
             'Next
         Next
-        Threading.Thread.Sleep(5000)
+        Thread.Sleep(5000)
     End Sub
 
     Sub myProcess(ByVal o As Object)
-        Console.WriteLine("[!] Process")
+        Console.WriteLine($"[!] Process")
         Dim gruppo As IEnumerable(Of Print) = TryCast(o, IEnumerable(Of Print))
 
         For Each stampa In gruppo
@@ -93,3 +91,4 @@ Module LINQ_test
         Console.WriteLine(lettera)
     End Sub
 End Module
+
