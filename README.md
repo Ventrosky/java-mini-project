@@ -2,6 +2,5 @@
 Small OOP projects in Java & VB.NET
 
 - agenzia-viaggi                     - **Java** university project, travel agency app.
-- tappy-playe                        - just another flappy bird clone using **libGDX**.
 - VBXMLdemo                          - **Visual Basic** & XML, fiscal code generator.
 - VB-NET_Tests                       - Testing **VB.NET** MultiThreading and LINQ.
