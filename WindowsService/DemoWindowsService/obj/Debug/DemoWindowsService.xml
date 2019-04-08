@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DemoWindowsService
+</name>
+</assembly>
+<members>
+<member name="T:DemoWindowsService.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:DemoWindowsService.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:DemoWindowsService.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:DemoWindowsService.ServiceDemo.OnStart(System.String[])">
+ 
+ Prompt dei comandi per gli sviluppatori per VS 2017
+ installutil.exe "DemoWindowsService.exe"
+ sc.exe delete "Windows Service Demo"
+ 
+</member>
+</members>
+</doc>

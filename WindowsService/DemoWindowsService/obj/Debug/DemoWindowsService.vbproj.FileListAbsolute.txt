@@ -1,0 +1,11 @@
+C:\Users\Ventrosky\source\repos\DemoWindowsService\DemoWindowsService\bin\Debug\DemoWindowsService.exe.config
+C:\Users\Ventrosky\source\repos\DemoWindowsService\DemoWindowsService\bin\Debug\DemoWindowsService.exe
+C:\Users\Ventrosky\source\repos\DemoWindowsService\DemoWindowsService\bin\Debug\DemoWindowsService.pdb
+C:\Users\Ventrosky\source\repos\DemoWindowsService\DemoWindowsService\bin\Debug\DemoWindowsService.xml
+C:\Users\Ventrosky\source\repos\DemoWindowsService\DemoWindowsService\obj\Debug\DemoWindowsService.Resources.resources
+C:\Users\Ventrosky\source\repos\DemoWindowsService\DemoWindowsService\obj\Debug\DemoWindowsService.ProjectInstaller.resources
+C:\Users\Ventrosky\source\repos\DemoWindowsService\DemoWindowsService\obj\Debug\DemoWindowsService.vbproj.GenerateResource.cache
+C:\Users\Ventrosky\source\repos\DemoWindowsService\DemoWindowsService\obj\Debug\DemoWindowsService.vbproj.CoreCompileInputs.cache
+C:\Users\Ventrosky\source\repos\DemoWindowsService\DemoWindowsService\obj\Debug\DemoWindowsService.exe
+C:\Users\Ventrosky\source\repos\DemoWindowsService\DemoWindowsService\obj\Debug\DemoWindowsService.xml
+C:\Users\Ventrosky\source\repos\DemoWindowsService\DemoWindowsService\obj\Debug\DemoWindowsService.pdb
