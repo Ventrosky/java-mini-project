@@ -16,11 +16,23 @@ Enum CDSTMOV
     Stornato
 End Enum
 
+Public Class CONTO
+    Public CDCOORDCLI As String
+    Public DSINTEST As String
+End Class
+
+Public Class COORD
+    Public DSMODPAG As String
+    Public CONTO As CONTO
+End Class
+
+
 Public Class INCAS
 
     Public PRGMOV As String
     Public IMMOVIM As Double
     Public DSSTMOV As String
+    Public COADD As COORD()
 End Class
 
 
@@ -57,18 +69,25 @@ Public Class Run
         i1.PRGMOV = "1"
         i1.IMMOVIM = 105.66
         i1.DSSTMOV = NameOf(CDSTMOV.Incassato)
+        Dim conto1 As CONTO = New CONTO()
+        Dim coord1 As COORD = New COORD()
+        conto1.DSINTEST = "Mario Rossi"
+        conto1.CDCOORDCLI = "IT0960000000123"
+        coord1.DSMODPAG = "Bonifico"
+        coord1.CONTO = conto1
+        i1.COADD = {coord1}
 
         Dim i2 As New INCAS()
         i2.PRGMOV = "2"
         i2.IMMOVIM = 5.1
         i2.DSSTMOV = NameOf(CDSTMOV.Addebitato_non_esitato).Replace("_"c, " "c)
+        i2.COADD = {coord1}
 
         Dim myIncassi() As INCAS = {i1, i2}
 
         pratica.Incassi = myIncassi
         s.Serialize(writer, pratica)
         writer.Close()
-        Console.ReadKey()
 
     End Sub
 
@@ -96,8 +115,31 @@ Public Class Run
         <ANNMP xmlns:xsi=""http//www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
           <INCAS>
             <PRGMOV>1</PRGMOV>
-            <IMMOVIM>260.55</IMMOVIM>
+            <IMMOVIM>105.66</IMMOVIM>
             <DSSTMOV>Incassato</DSSTMOV>
+            <COADD>
+              <COORD>
+                <DSMODPAG>Bonifico</DSMODPAG>
+                <CONTO>
+                  <CDCOORDCLI>IT0960000000123</CDCOORDCLI>
+                  <DSINTEST>Mario Rossi</DSINTEST>
+                </CONTO>
+              </COORD>
+            </COADD>
+          </INCAS>
+          <INCAS>
+            <PRGMOV>2</PRGMOV>
+            <IMMOVIM>5.1</IMMOVIM>
+            <DSSTMOV>Addebitato non esitato</DSSTMOV>
+            <COADD>
+              <COORD>
+                <DSMODPAG>Bonifico</DSMODPAG>
+                <CONTO>
+                  <CDCOORDCLI>IT0960000000123</CDCOORDCLI>
+                  <DSINTEST>Mario Rossi</DSINTEST>
+                </CONTO>
+              </COORD>
+            </COADD>
           </INCAS>
         </ANNMP>"
         Dim ms As MemoryStream = New MemoryStream(Encoding.UTF8.GetBytes(sInput))
